@@ -399,7 +399,6 @@ th{
   text-align: center;
   color: var(--text);
   padding:10px;  
-  border-bottom: solid 10px var(--coral);
 }
 
 
@@ -656,6 +655,10 @@ body {
 }
 
 #river #title{
+ background-image: url(../img/river428px.webp) ;
+ background-repeat: no-repeat;
+ max-width: 480px;
+ height: 450px;
  display: grid;
  grid-template-columns: repeat(6,1fr);
  grid-template-areas:
@@ -819,55 +822,202 @@ color: #999;
 
 /*---------------------------------------------- Canoe Form CSS ---------------------------------------------------*/
 
-
-
+/*
+nav ul{
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 5px;
+  }
 
 /* ----------------------------- Media Queries -------------------------------------*/
 
+/* home */
 
+@media screen and (min-width:768px){
+  #title img{
+  grid-area: img;
+}
 
- /* @media screen and (min-width:768px){
-   
+#home #first{
+  grid-area: nav;
+}
+
+#home .title-content{
+  grid-area: heading;
+}
+  nav li {
+    float: none;
+  }
+#home #first {
+    grid-area: nav;
+    width: 100%;
+    justify-content: space-around; /* or space-between */
+  }
+  nav{
+    width: 100%;
+  }
+body {
+    padding: 0;
+  }
 .container{
-    max-width:900px;
+  max-width: 900px;
+}
+
+
+  #home #title{
+    background-image: url(../img/homeback1200px.webp);
+    max-width: 100%;
+    grid-template-areas:
+      "img nav nav nav nav nav"
+      "heading heading heading heading heading heading"
+    ;
+  }
+}
+
+/* cabin */
+@media screen and (min-width: 768px){
+  #cabin #title{
+    background-image: url(../img/cabin1200px.webp);
+    max-width: 100%;
+    grid-template-areas:
+      "img nav nav nav nav nav"
+      "heading heading heading heading heading heading"
+      "info info info info info info"
+      "imgs imgs imgs imgs imgs imgs"
+      "search search search search search search "
+      "form form form form form form"
+      "amenities amenities amenities amenities amenities amenities"
+      "reviews reviews reviews reviews reviews reviews"
+      "footer footer footer footer footer footer"
+      ;
+  }
+  
+  #title img{
+  grid-area: img;
+}
+
+#cabin #first{
+  grid-area: nav;
+}
+#cabin-info{
+  grid-area: info;
+}
+#cabin-imgs{
+  grid-area: imgs;
+}
+#cabin #search{
+  grid-area: search;
+}
+#cabin .form-container{
+  grid-area: form;
+}
+#cabin #amenities{
+  grid-area: amenities;
+}
+#cabin #reviews {
+  grid-area: reviews;
+}
+footer{
+  grid-area: footer;
+}
+#cabin .title-content{
+  grid-area: heading;
+}
+}
+
+@media screen and (min-width: 768px){
+  
+  #canoe #title{
+    background-image: url(../img/canoeback1200px.webp);
+    max-width: 100%;
+    grid-template-areas:
+      "img nav nav nav nav nav"
+      "heading heading heading heading heading heading"
+      "about about about about about about"
+      "rent rent rent rent rent rent"
+      "form form form form form form"
+      "shuttle shuttle shuttle shuttle shuttle shuttle"
+      "footer footer footer footer footer footer"
+      ;
   }
 
-main.container {
-  max-width:900px;
-  grid-template-columns:45% auto;
-  grid-template-areas:
-    ""
-    ""
-    ""
-    ""
+  #canoe .title-content{
+    grid-area: heading;
+  }
+  #canoe #first{
+    grid-area: nav;
+  }
+  #canoe #about-canoes{
+    grid-area: about;
+    background: url(../img/canoelake1200px.webp);
+    max-width: 100%;
+  }
+  #canoe #rentals{
+    grid-area: rent;
+  }
+  #canoe .form-container{
+    grid-area: form;
+  }
+  #canoe #shuttle{
+    grid-area: shuttle;
+  }
+  footer{
+    grid-area: footer;
+  }
+}
+/* canoe */
+/* river levels */
+/* map */
+/*
 
-    ;
+
+img.title{
+  grid-area: img;
 }
 
-{
-  display:grid;
-  grid-template-areas: 
-  ""
-  ""
-  ""
-  ;
-
+#home #first{
+  grid-area: nav;
 }
 
-.bio{
-grid-area:bio
+#home .title-content{
+  grid-area: heading;
 }
 
-.details{
-  grid-area:details;
+#home .title-content {
+  text-align:center;
+  color: var(--text);
+  padding:10px;  
 }
 
-.footer{
-  grid-area:footer;
-  padding-bottom:20px;
-  border-bottom: 2px solid #879EBF;
+#mission{
+  padding: 10px;
+ margin: 10px;
+ text-align: center;
+ grid-area: mission;
 }
 
-} */
+#story{
+padding: 10px;
+ margin: 10px;
+ text-align: center;
+ grid-area: story;
+}
 
+#commitment{
+padding: 20px;
+ margin: 10px;
+ text-align: center;
+ grid-area: commitment;
+}
 
+#why{
+padding: 20px;
+ margin: 10px;
+ text-align: center;
+ grid-area: why;
+}
+
+footer{
+  grid-area: footer;
+}
+}
