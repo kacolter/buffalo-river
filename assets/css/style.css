@@ -874,6 +874,16 @@ body {
   }
 }
 
+@media screen and (min-width:992px){
+  .container{
+    max-width: 1200px;
+  }
+  #cabin #title{
+    max-height: 100%;
+  }
+}
+
+
 /* cabin */
 @media screen and (min-width: 768px){
   #cabin #title{
@@ -965,6 +975,8 @@ footer{
     grid-area: footer;
   }
 }
+
+
 /* canoe */
 /* river levels */
 /* map */
