@@ -417,9 +417,7 @@ th{
   max-width:100%;
 }
 
-#cabin .container{
-  width:70vw;
-}
+
 
 #activities ul,#search ul,#cabin-info ul, #amenities ul{
   list-style-type: square;
@@ -771,6 +769,7 @@ body {
 }
 #cabin-info{
   grid-area: info;
+  margin: 75px auto;
 }
 #cabin-imgs{
   grid-area: imgs;
