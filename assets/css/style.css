@@ -38,7 +38,6 @@ body {
   width: 100%;       
   max-width: 480px;  
   margin: 0 auto;
-  overflow-x: hidden;
   background-color: var(--background);
 }
 
@@ -61,26 +60,30 @@ h1,h2,h3,h4{
 }
 /* -------------------------------------------------------------Index and About CSS----------------------------------------------------------- */
 
+#title {
+ display: grid;
+ grid-template-columns: 120px auto;
+ grid-template-rows: 100px auto; 
+ grid-template-areas:
+ "img nav"
+ "heading heading";
+}
+
 #home #title{
- background-image: url(../img/homeback480px.webp) ;
+ background-image: url(https://kacolter.github.io/buffalo-river/assets/img/homeback480px.webp) ;
  background-repeat: no-repeat;
  max-width: 480px;
  height: 450px;
- display: grid;
- grid-template-columns: repeat(6,1fr);
- grid-template-areas:
- "img nav nav nav nav nav"
- "heading heading heading heading heading heading"
- 
- ;
 }
 
 #title img{
   grid-area: img;
+  max-width:100%;
 }
 
-#home #first{
+#home #navbar{
   grid-area: nav;
+  display:block;
 }
 
 #home .title-content{
@@ -89,31 +92,32 @@ h1,h2,h3,h4{
 
 #home .title-content {
   text-align:center;
+  margin-top: 75px;
   color: var(--text);
   padding:10px;  
 }
 
 #mission{
-  padding: 10px;
- margin: 10px;
+ padding: 25px;
+ margin: 25px 10px 10px 10px;
  text-align: center;
 }
 
 #story{
-padding: 10px;
+padding: 25px;
  margin: 10px;
  text-align: center;
 }
 
 #commitment{
-padding: 20px;
+padding: 25px;
  margin: 10px;
  text-align: center;
 }
 
 #why{
-padding: 20px;
- margin: 10px;
+padding: 25px;
+ margin: 10px 10px 25px 10px ;
  text-align: center;
 }
 
@@ -121,115 +125,96 @@ padding: 20px;
   color:var(--coral);
 }
 
+#home #commitment h2{
+  margin-bottom: 35px;
+}
+
+footer #copy{
+  text-align: center;
+}
+
+footer ul{
+  text-align: center;
+  margin-right: 50px;
+}
+
+
 
 /* -------------------------------------------------------------Index and About CSS----------------------------------------------------------- */
 
 /* -------------------------------------------Nav CSS----------------------------------------------- */
 
- nav{
-    padding:1px;
-  }
+/* Main Flexbox Navbar */
+.nav-links {
+  margin-top:25px;
+  padding:0;
+  display: flex;
+  gap:10px;
+  list-style: none;
+  justify-content:flex-end; 
+}
 
-   nav li{
-    float:left;
-   }
+.nav-links li {
+  position: relative; /* Essential for dropdown positioning */
+}
 
-   nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-   }
+.nav-links a {
+  display: block;
+  padding: 15px ;
+  color: white;
+  text-decoration: none;
+}
 
-   #first{
-    display: flex;
-    flex-direction: row;
-   }
-
-   nav ul li a, .dropbtn{
-    display: block;
-    text-align: center;
-    color: var(--text);
-    padding: 10px;
-    margin-top:10px;
-    text-decoration: none;
-   }
-
-nav ul li a:hover {
+.nav-links a:hover {
   background-color: var(--forrest);
 }
 
-nav li.dropdown{
- position: relative; 
-  float: left;
-}
-
-
-.dropdown-content {
+/* Dropdown Menu - Hidden by default */
+.dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%; /* Places it right below the "Rentals" text */
+  top: 100%; /* Positions it directly below the nav item */
   left: 0;
-  background-color: var(--forrest);
+  background-color: var(--brown);
   min-width: 160px;
-  z-index: 100;
-  /* display: none;
-  position: absolute;
-  background-color: var(--forrest);
-  min-width: 160px;
-  z-index: 1; */
+  list-style: none;
+  padding:0;
+  z-index: 1; /* Ensures it stays on top of other content */
 }
 
-.dropdown-content a {
-  color: var(--text);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+.dropdown-menu li {
+  width: 100%; /* Items stack vertically */
 }
 
-.dropdown-content a:hover {
-  background-color: var(--turq);
-}
-
-
-.dropdown:hover .dropdown-content {
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
   display: block;
 }
+
 
 /* -------------------------------------------Nav CSS----------------------------------------------- */
 
-.title-bar{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
 
-
- .title{
-  width:120px;
-  height: 120px;
-}
 
 /* -------------------------------------------------------------Canoe CSS----------------------------------------------------------*/
+#canoe .title-content{
+  margin-top: 50px;
+}
+
+
+
 #canoe #title{
- background-image: url(../img/canoeback480px.webp) ;
+ background-image: url(https://kacolter.github.io/buffalo-river/assets/img/canoeback480px.webp) ;
  background-repeat: no-repeat;
  max-width: 480px;
  height: 450px;
- display: grid;
- grid-template-columns: repeat(6,1fr);
- grid-template-areas:
- "img nav nav nav nav nav"
- "heading heading heading heading heading heading"
- 
- ;
 }
 
 #title img{
   grid-area: img;
 }
 
-#canoe #first{
+#canoe #navbar{
   grid-area: nav;
 }
 
@@ -252,7 +237,7 @@ nav li.dropdown{
 }
 
 #about-canoes{
- background-image: url(../img/canoelake480px.webp);
+ background-image: url(https://kacolter.github.io/buffalo-river/assets/img/canoelake480px.webp);
  background-repeat: no-repeat;
  max-width: 480px;
  height: 400px;
@@ -270,7 +255,7 @@ nav li.dropdown{
 }
 
 #shuttle h3{
-  color:var(--orange)
+  color:var(--orange);
 }
 
 table{
@@ -314,8 +299,8 @@ th{
 
     
   
-  td{
-  border:2px solid var(--coral);
+  td, th{
+  border:5px solid var(--background);
   padding:5px;
   }
 
@@ -359,41 +344,12 @@ th{
 /* -------------------------------------------------------------Cabin CSS----------------------------------------------------------- */
 
 #cabin #title{
- background-image: url(../img/cabin.webp) ;
+ background-image: url(https://kacolter.github.io/buffalo-river/assets/img/cabin.webp) ;
  background-repeat: no-repeat;
  max-width: 480px;
  height: 450px;
- display: grid;
- grid-template-columns: repeat(6,1fr);
- grid-template-areas:
- "img nav nav nav nav nav"
- "heading heading heading heading heading heading"
- 
- ;
 }
 
-.slick-autoplay-toggle-button,
-.slick-prev .slick-prev-icon, .slick-next .slick-next-icon,
-.slick-dots li button .slick-dot-icon,
-.slick-dots li.slick-active button .slick-dot-icon {
-  color: white;
-}
-
-
-.slick-next:focus .slick-next-icon,
-.slick-next:focus .slick-prev-icon,
-.slick-prev:focus .slick-next-icon,
-.slick-prev:focus .slick-prev-icon,
-.slick-dots li.slick-active button:focus .slick-dot-icon,
-.slick-autoplay-toggle-button:focus 
-{
-    color:black;
-}
-
-.slick-autoplay-toggle-button {
-    display: none !important; /* Hides the autoplay toggle button */
-    visibility: hidden;
-}
 
 #cabin .title-content {
   text-align: center;
@@ -406,7 +362,7 @@ th{
   grid-area: img;
 }
 
-#cabin #first{
+#cabin #navbar{
   grid-area: nav;
 }
 
@@ -462,7 +418,6 @@ th{
 }
 
 #cabin .container{
-  margin:40px auto;
   width:70vw;
 }
 
@@ -533,152 +488,71 @@ footer a:hover{
 
 /*---------------------------------------------- River Levels CSS -----------------------------------------*/
 
-/* --------------------
-   HEADER
---------------------- */
-.river {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-h1.river{
-  color: #8B6508;
-  border-bottom: 4px solid #8B6508;
-  padding-bottom: 5px;
-}
-
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f5f7fb;
-  margin: 0;
-  padding: 20px;
-  color: #222;
-}
-
-/* --------------------
-   LEGEND
---------------------- */
-.legend {
-  max-width: 1000px;
-  margin: 20px auto 30px;
-  background: white;
-  padding: 15px 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 6px 0;
-  font-weight: 500;
-}
-
-.legend-color {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-}
-
-/* Legend colors */
-.very-low { background: #000; }
-.low { background: #1e3a8a; }
-.moderate { background: #16a34a; }
-.high { background: #eab308; }
-.flood { background: #dc2626; }
-
-/* --------------------
-   CARDS
---------------------- */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  max-width: 1000px;
-  margin: 0 auto 30px;
-}
-
-.card {
-  background: white;
-  border-radius: 16px;
-  padding: 18px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-
-.card:focus {
-  outline: 3px solid #000;
-}
-
-.card h3 {
-  margin: 0 0 8px;
-}
-
-.level {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.status {
-  font-weight: bold;
-}
-
-/* Color borders */
-.card.very-low { border-left: 8px solid #000; }
-.card.low { border-left: 8px solid #1e3a8a; }
-.card.moderate { border-left: 8px solid #16a34a; }
-.card.high { border-left: 8px solid #eab308; }
-.card.flood { border-left: 8px solid #dc2626; }
-
-/* --------------------
-   CHART
---------------------- */
-.chart-card {
-  margin: 0 auto;
-  background: white;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-
-.chart-container {
-  margin:0px;
-  height: 500px;
-}
-
 #river #title{
- background-image: url(../img/river428px.webp) ;
+ background-image:url(../img/river480px.webp);
  background-repeat: no-repeat;
  max-width: 480px;
  height: 450px;
- display: grid;
- grid-template-columns: repeat(6,1fr);
- grid-template-areas:
- "img nav nav nav nav nav"
- "heading heading heading heading heading heading"
- 
- ;
 }
 
-#title img{
-  grid-area: img;
+h1.river { color: var(--forrest); margin: 28px 0 6px; }
+h2.river { margin-top: 4px; font-size: 1.3rem; opacity: 0.8; color: var(--forrest); }
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px; margin: 20px 0;
+}
+@media (min-width: 480px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+
+.card {
+  background: white; border-radius: var(--radius);
+  padding: 16px; box-shadow: var(--shadow);
+  cursor: pointer; text-align: center;
+  border-top: 5px solid var(--forrest);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.card:hover, .card:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.15);
+  outline: 2px solid var(--turq);
+}
+.card h3      { font-size: 1.1rem; margin-bottom: 6px; color: var(--forrest); }
+.card .status { font-size: 0.8rem; font-weight: 600; margin: 4px 0; text-transform: uppercase; letter-spacing: 0.05em; }
+.card .level  { font-family: "gin", serif; font-size: 1.4rem; color: var(--brown); margin: 0; }
+
+.card.very-low  { border-top-color: #aaa; }
+.card.low       { border-top-color: var(--turq); }
+.card.moderate  { border-top-color: #4caf50; }
+.card.high      { border-top-color: var(--orange); }
+.card.flood     { border-top-color: var(--coral); }
+.card.very-low  .status { color: #777; }
+.card.low       .status { color: #00897b; }
+.card.moderate  .status { color: #388e3c; }
+.card.high      .status { color: var(--orange); }
+.card.flood     .status { color: var(--coral); }
+
+.chart-card {
+  background: white; border-radius: 16px;
+  padding: 20px 16px; margin: 24px 0 40px;
+  box-shadow: var(--shadow);
+}
+.chart-container { position: relative; width: 100%; height: 300px; }
+#riverChart { width: 100% !important; height: 100% !important; }
+
+@media (min-width: 768px)  { .chart-container { height: 380px; } 
+#river #title{
+    background-image: url(../img/river1200px.webp);
+    max-width: 100%;
 }
 
-#river #first{
-  grid-area: nav;
+@media (min-width: 1024px) { .chart-container { height: 480px; } .chart-card { padding: 28px; } 
+#river #title{
+    background-image: url(../img/river1200px.webp);
+    max-width: 100%;
 }
 
-#river .title-content{
-  grid-area: heading;
-}
+
 /*---------------------------------------------- River Levels CSS -----------------------------------------*/
 
 
@@ -707,7 +581,7 @@ h2.map {
   grid-area: img;
 }
 
-#map #first{
+#map #navbar{
   grid-area: nav;
 }
 
@@ -834,21 +708,24 @@ nav ul{
 /* home */
 
 @media screen and (min-width:768px){
-  #title img{
-  grid-area: img;
+
+#cabin-imgs
+
+#canoe table{
+  max-width: 340px;
+  margin-left: 368px;
+  margin-top: 30px;
 }
 
-#home #first{
-  grid-area: nav;
+#canoe #shuttle table{
+  margin-left: 388px;
+  margin-bottom: 
 }
-
 #home .title-content{
   grid-area: heading;
 }
-  nav li {
-    float: none;
-  }
-#home #first {
+  
+#home #navbar {
     grid-area: nav;
     width: 100%;
     justify-content: space-around; /* or space-between */
@@ -865,18 +742,18 @@ body {
 
 
   #home #title{
-    background-image: url(../img/homeback1200px.webp);
+    background-image: url(https://kacolter.github.io/buffalo-river/assets/img/homeback1200px.webp);
     max-width: 100%;
     grid-template-areas:
-      "img nav nav nav nav nav"
-      "heading heading heading heading heading heading"
+      "img nav"
+      "heading heading"
     ;
   }
 }
 
 @media screen and (min-width:992px){
   .container{
-    max-width: 2000px;
+    max-width: 1200px;
   }
   #cabin #title{
     max-height: 100%;
@@ -887,18 +764,18 @@ body {
 /* cabin */
 @media screen and (min-width: 768px){
   #cabin #title{
-    background-image: url(../img/cabin1200px.webp);
+    background-image: url(https://kacolter.github.io/buffalo-river/assets/img/cabin1200px.webp);
     max-width: 100%;
     grid-template-areas:
-      "img nav nav nav nav nav"
-      "heading heading heading heading heading heading"
-      "info info info info info info"
-      "imgs imgs imgs imgs imgs imgs"
-      "search search search search search search "
-      "form form form form form form"
-      "amenities amenities amenities amenities amenities amenities"
-      "reviews reviews reviews reviews reviews reviews"
-      "footer footer footer footer footer footer"
+      "img nav"
+      "heading heading"
+      "info info"
+      "imgs imgs"
+      "search search"
+      "form form"
+      "amenities amenities"
+      "reviews reviews"
+      "footer footer"
       ;
   }
   
@@ -906,7 +783,7 @@ body {
   grid-area: img;
 }
 
-#cabin #first{
+#cabin #navbar{
   grid-area: nav;
 }
 #cabin-info{
@@ -936,30 +813,36 @@ footer{
 }
 
 @media screen and (min-width: 768px){
-  
+  footer h5, address, #phone{
+    margin: 35px;
+  }
+  #mission, #story, #commitment, #why{
+    margin-left: 35px;
+    margin-right: 35px;
+  }
   #canoe #title{
-    background-image: url(../img/canoeback1200px.webp);
+    background-image: url(https://kacolter.github.io/buffalo-river/assets/img/canoeback1200px.webp);
     max-width: 100%;
     grid-template-areas:
-      "img nav nav nav nav nav"
-      "heading heading heading heading heading heading"
-      "about about about about about about"
-      "rent rent rent rent rent rent"
-      "form form form form form form"
-      "shuttle shuttle shuttle shuttle shuttle shuttle"
-      "footer footer footer footer footer footer"
+      "img nav"
+      "heading heading"
+      "about about"
+      "rent rent"
+      "form form"
+      "shuttle shuttle"
+      "footer footer"
       ;
   }
 
   #canoe .title-content{
     grid-area: heading;
   }
-  #canoe #first{
+  #canoe #navbar{
     grid-area: nav;
   }
   #canoe #about-canoes{
     grid-area: about;
-    background: url(../img/canoelake1200px.webp);
+    background: url(https://kacolter.github.io/buffalo-river/assets/img/canoelake1200px.webp);
     max-width: 100%;
   }
   #canoe #rentals{

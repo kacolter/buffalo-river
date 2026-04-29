@@ -1,71 +1,51 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>River Dashboard</title>
+  <title>River Levels</title>
 
-  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="https://use.typekit.net/ehe6eed.css">
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 
 <body id="river">
 
 <main class="container">
-
-  <section id="title">
-
-    <div class="title-bar"></div>
-    <a href="index.html">
-    <img class="title" src="assets/img/logooo.webp" alt="turquoise sun with elf coming from left corner">
-    </a>
-    <nav id="navbar" role="navigation">
-    
-        <ul id="first">
-            <li><a href="index.html">Home</a></li>
-            
-            <li class="dropdown">
-            <a class="dropbtn">Rentals</a>
-                <ul>
-                    <div class="dropdown-content">
-                    <li><a href="cabin.html">Cabin Rentals</a></li>
-                    <li><a href="canoe.html">Canoe Rentals</a></li>
-                    </div>
-                </ul>   
-            </li>
-
+    <section id="title">
+      <img class="title" src="assets/img/logooo.webp" alt="turquoise sun with elf coming from left corner">
+      <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <!-- Dropdown Item -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-trigger">Rentals</a>
+            <ul class="dropdown-menu">
+              <li><a href="cabin.html">Cabin Rentals</a></li>
+              <li><a href="canoe.html">Canoe Rentals</a></li>
+            </ul>
+          </li>
             <li><a href="river.html">River Levels</a></li>
             <li><a href="map.html"> Map</a></li>
         </ul>
-    </nav>
-    </div>
-    </section>
-
-  <header class="header">
-    <h1>River Conditions Dashboard</h1>
-    <p>Select a river to view detailed trends</p>
-  </header>
-
-  <!-- Legend / Key -->
-  <section class="legend">
-    <h3>River Level Key</h3>
-
-    <div class="legend-item"><span class="legend-color very-low"></span> Very Low</div>
-    <div class="legend-item"><span class="legend-color low"></span> Low</div>
-    <div class="legend-item"><span class="legend-color moderate"></span> Moderate</div>
-    <div class="legend-item"><span class="legend-color high"></span> High</div>
-    <div class="legend-item"><span class="legend-color flood"></span> Flood Stage</div>
+      </nav>
+      <div class="title-content">
+        <h1>River Levels</h1>
+        <p>Heritage, Nature, & Community</p>
+      </div>
   </section>
 
-  <!-- Cards -->
-  <section class="cards" id="cards"></section>
+  <!-- TITLE -->
+  <h1 class="river">River Levels</h1>
+  <h2 id="chartTitle" class="river"></h2>
 
-  <!-- Chart -->
+  <!-- CARDS -->
+  <section id="cards" class="cards"></section>
+
+  <!-- CHART -->
   <section class="chart-card">
-    <h2 id="chartTitle">Select a River</h2>
     <div class="chart-container">
       <canvas id="riverChart"></canvas>
     </div>
@@ -82,8 +62,8 @@
             AR-43, Compton, AR
             36°01'33.6"N 93°21'54.6"W
         </address>
-        <p> Phone: (501) 555-5555</p>
-        <p>&copy; Wild Buffalo River Company</p>
+        <p id="phone"> Phone: (501) 555-5555</p>
+        <p id="copy">&copy; Wild Buffalo River Company</p>
 
 </footer>
 
