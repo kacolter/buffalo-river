@@ -489,7 +489,7 @@ footer a:hover{
 /*---------------------------------------------- River Levels CSS -----------------------------------------*/
 
 #river #title{
- background-image:url(../img/river480px.webp);
+ background-image: url(../img/river480px.webp);
  background-repeat: no-repeat;
  max-width: 480px;
  height: 450px;
@@ -540,17 +540,8 @@ h2.river { margin-top: 4px; font-size: 1.3rem; opacity: 0.8; color: var(--forres
 .chart-container { position: relative; width: 100%; height: 300px; }
 #riverChart { width: 100% !important; height: 100% !important; }
 
-@media (min-width: 768px)  { .chart-container { height: 380px; } 
-#river #title{
-    background-image: url(../img/river1200px.webp);
-    max-width: 100%;
-}
-
-@media (min-width: 1024px) { .chart-container { height: 480px; } .chart-card { padding: 28px; } 
-#river #title{
-    background-image: url(../img/river1200px.webp);
-    max-width: 100%;
-}
+@media (min-width: 768px)  { .chart-container { height: 380px; } }
+@media (min-width: 1024px) { .chart-container { height: 480px; } .chart-card { padding: 28px; } }
 
 
 /*---------------------------------------------- River Levels CSS -----------------------------------------*/
@@ -709,18 +700,6 @@ nav ul{
 
 @media screen and (min-width:768px){
 
-#cabin-imgs
-
-#canoe table{
-  max-width: 340px;
-  margin-left: 368px;
-  margin-top: 30px;
-}
-
-#canoe #shuttle table{
-  margin-left: 388px;
-  margin-bottom: 
-}
 #home .title-content{
   grid-area: heading;
 }
@@ -763,6 +742,23 @@ body {
 
 /* cabin */
 @media screen and (min-width: 768px){
+  #cabin-imgs{
+  display: flex;
+  flex-direction: row;
+}
+
+#one{
+  grid-area: one;
+}
+#two{
+  grid-area: two;
+}
+#three{
+  grid-area: three;
+}
+#four{
+  grid-area: four;
+}
   #cabin #title{
     background-image: url(https://kacolter.github.io/buffalo-river/assets/img/cabin1200px.webp);
     max-width: 100%;
@@ -833,6 +829,15 @@ footer{
       "footer footer"
       ;
   }
+  #canoe table{
+  max-width: 340px;
+  margin-left: 368px;
+  margin-top: 30px;
+}
+
+#canoe #shuttle table{
+  margin-left: 388px;
+}
 
   #canoe .title-content{
     grid-area: heading;
