@@ -1,88 +1,84 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css"/>
-    <link rel="stylesheet" href="https://use.typekit.net/ehe6eed.css">
     <title>Google Map</title>
+
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet"href="https://use.typekit.net/ehe6eed.css">
 </head>
 
 <body id="map">
-   <main class="container">
 
-   <section id="title">
+<main class="container">
 
-    <div class="title-bar"></div>
-    <a href="index.html">
-    <img class="title" src="assets/img/logooo.webp" alt="turquoise sun with elf coming from left corner">
-    </a>
-    <nav id="navbar" role="navigation">
-    
-        <ul id="first">
-            <li><a href="index.html">Home</a></li>
-            
-            <li class="dropdown">
-            <a class="dropbtn">Rentals</a>
-                <ul>
-                    <div class="dropdown-content">
-                    <li><a href="cabin.html">Cabin Rentals</a></li>
-                    <li><a href="canoe.html">Canoe Rentals</a></li>
-                    </div>
-                </ul>   
-            </li>
-
+<section id="title">
+      <img class="title" src="assets/img/logooo.webp" alt="turquoise sun with elf coming from right corner">
+      <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <!-- Dropdown Item -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-trigger">Rentals</a>
+            <ul class="dropdown-menu">
+              <li><a href="cabin.html">Cabin Rentals</a></li>
+              <li><a href="canoe.html">Canoe Rentals</a></li>
+            </ul>
+          </li>
             <li><a href="river.html">River Levels</a></li>
             <li><a href="map.html"> Map</a></li>
         </ul>
-    </nav>
-    </div>
-    </section>
-
-     <div id="map"></div>
-
-
-
-
-
-
-     
-
+      </nav>
     </section>
 
 
-        <footer class="footer">
+    <!-- MAP SECTION -->
+    <section class="map-section">
+
+        <!-- GOOGLE MAP RENDERS HERE -->
+        <div id="map-canvas"></div>
+
+        <!-- PDF LINK -->
+        <p class="map-link">
+            <a href="assets/wild-buffalo-river-map.pdf" target="_blank">
+                Download Wild Buffalo River Map (PDF)
+            </a>
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
         <ul>
-           <li><a href="map.html">Map and Directions</a></li>
+            <li><a href="map.html">Map and Directions</a></li>
             <li><a href="river.html">River Levels</a></li>
             <li><a href="#">FAQ</a></li>
         </ul>
-        <h5> Reach Out</h5>
+
+        <h5>Reach Out</h5>
+
         <address>
-            AR-43, Compton, AR
+            AR-43, Compton, AR<br>
             36°01'33.6"N 93°21'54.6"W
         </address>
-        <p id="phone"> Phone: (501) 555-5555</p>
-        <p id="copy">&copy; Wild Buffalo River Company</p>
 
-</footer>
-    </main>
+        <p>Phone: (501) 555-5555</p>
+        <p>&copy; Wild Buffalo River Company</p>
+    </footer>
 
+</main>
 
+<!-- YOUR JS -->
+<script src="assets/js/scripts.js"></script>
 
+<!-- GOOGLE MAPS API -->
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAADuHdvRayhYJ8scDVeRMArsGkh9LHZek&callback=initMap&libraries=marker"
+  async defer>
+</script>
 
-
-
-
-
-    <script src="assets/js/scripts.js"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAADuHdvRayhYJ8scDVeRMArsGkh9LHZek&callback=initMap&v=weekly&libraries=marker"
-      async>
-    </script>
 </body>
 </html>
-
-
 
 

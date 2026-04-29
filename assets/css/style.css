@@ -492,7 +492,15 @@ footer a:hover{
  height: 450px;
 }
 
-h1.river { color: var(--forrest); margin: 28px 0 6px; }
+#river #cards, #river .chart-card{
+  margin: 50px;
+}
+
+h1.river { 
+  color: var(--forrest); margin: 28px 0 6px; 
+  text-align:center;
+}
+
 h2.river { margin-top: 4px; font-size: 1.3rem; opacity: 0.8; color: var(--forrest); }
 
 .cards {
@@ -537,7 +545,8 @@ h2.river { margin-top: 4px; font-size: 1.3rem; opacity: 0.8; color: var(--forres
 .chart-container { position: relative; width: 100%; height: 300px; }
 #riverChart { width: 100% !important; height: 100% !important; }
 
-@media (min-width: 768px)  { .chart-container { height: 380px; } }
+@media (min-width: 768px)  { .chart-container { height: 380px; }
+}
 @media (min-width: 1024px) { .chart-container { height: 480px; } .chart-card { padding: 28px; } }
 
 
@@ -550,34 +559,44 @@ h2.river { margin-top: 4px; font-size: 1.3rem; opacity: 0.8; color: var(--forres
 
 /*---------------------------------------------- Map CSS ---------------------------------------------------*/
 
-h2.map {
-    text-align: center;
-    color: var(--forrest);
-}
+/* =========================================================
+   MAP PAGE
+========================================================= */
 
 #map #title{
- display: grid;
- margin:0px;
- grid-template-columns: repeat(6,1fr);
- grid-template-areas:
- "img nav nav nav nav nav"
- 
- ;
+ background-image: url(../img/mapback428px.webp);
+ background-repeat: no-repeat;
+ max-width: 480px;
+ height: 450px;
+  
 }
 
-#title img{
-  grid-area: img;
+#map-canvas {
+  width: 100%; height: 350px;
+  margin: 24px auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: #d8d3cc; display: block;
 }
 
-#map #navbar{
-  grid-area: nav;
-}
+.map-section { padding: 0 0 20px; }
+h2.map { font-family: "gin", serif; color: var(--forrest); margin: 28px 0 0; }
 
-#map .container{
-  max-width: 480px;
+.map-link { text-align: center; margin: 12px 0 32px; }
+.map-link a {
+  color: var(--forrest); font-weight: 700; text-decoration: none;
+  font-size: 0.9rem; border-bottom: 2px solid transparent;
+  transition: border-color var(--transition), color var(--transition);
 }
+.map-link a:hover { color: var(--turq); border-bottom-color: var(--turq); }
+
+@media (min-width: 768px)  { #map-canvas { height: 450px; } }
+@media (min-width: 1024px) { #map-canvas { height: 550px; max-width: 900px; } }
+
 
 /*---------------------------------------------- Map CSS ---------------------------------------------------*/
+
+
 
 
 /*---------------------------------------------- Canoe Form CSS ---------------------------------------------------*/
@@ -734,6 +753,16 @@ body {
   #cabin #title{
     max-height: 100%;
   }
+
+  #river #title{
+    background-image: url(../img/river1200px.webp);
+    max-width: 100%;
+  }
+
+  #map #title{
+    background-image: url(../img/mapback1200px.webp);
+    max-width: 100%;
+  }
 }
 
 
@@ -838,11 +867,7 @@ footer{
       "footer footer"
       ;
   }
-  #canoe table{
-  max-width: 340px;
-  margin-left: 368px;
-  margin-top: 30px;
-}
+  
 
 #canoe #shuttle table{
   margin-left: 388px;
@@ -856,7 +881,8 @@ footer{
   }
   #canoe #about-canoes{
     grid-area: about;
-    background: url(https://kacolter.github.io/buffalo-river/assets/img/canoelake1200px.webp);
+    background: url(../img/canoelake2000px.webp);
+    background-repeat: no-repeat;
     max-width: 100%;
   }
   #canoe #rentals{
@@ -871,6 +897,17 @@ footer{
   footer{
     grid-area: footer;
   }
+#canoe table{
+    max-width: 340px;
+
+}
+   #canoe table{
+  margin-left: 525px;
+  margin-top: 30px;
+}
+#canoe #shuttle table{
+  margin-left: 540px;
+}
 }
 
 
