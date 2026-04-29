@@ -344,7 +344,7 @@ th{
 /* -------------------------------------------------------------Cabin CSS----------------------------------------------------------- */
 
 #cabin #title{
- background-image: url(https://kacolter.github.io/buffalo-river/assets/img/cabin.webp) ;
+ background-image: url(../img/cabin.webp) ;
  background-repeat: no-repeat;
  max-width: 480px;
  height: 450px;
@@ -446,7 +446,6 @@ blockquote{
 }
 
 footer.reviews{
-  background-color: var(--turq);
   padding:10px;
   text-align: right;
   font-style: italic;
@@ -489,7 +488,7 @@ footer a:hover{
 /*---------------------------------------------- River Levels CSS -----------------------------------------*/
 
 #river #title{
- background-image: url(../img/river480px.webp);
+ background-image: url(../img/river1200px.webp);
  background-repeat: no-repeat;
  max-width: 480px;
  height: 450px;
@@ -732,7 +731,7 @@ body {
 
 @media screen and (min-width:992px){
   .container{
-    max-width: 1200px;
+    max-width: 2000px;
   }
   #cabin #title{
     max-height: 100%;
@@ -747,18 +746,6 @@ body {
   flex-direction: row;
 }
 
-#one{
-  grid-area: one;
-}
-#two{
-  grid-area: two;
-}
-#three{
-  grid-area: three;
-}
-#four{
-  grid-area: four;
-}
   #cabin #title{
     background-image: url(https://kacolter.github.io/buffalo-river/assets/img/cabin1200px.webp);
     max-width: 100%;
