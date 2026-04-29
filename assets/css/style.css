@@ -769,8 +769,27 @@ body {
 }
 #cabin-info{
   grid-area: info;
-  margin: 75px auto;
+  margin-left: 100px;
 }
+#cabin-info h2{
+  margin-right: 58px;
+}
+
+#cabin #search p{
+  margin-left: 75px;
+  margin-right: 75px;
+}
+
+
+#cabin #search h3, #cabin #search ul{
+  text-align: center;
+  padding: 0;
+  list-style-position: inside;
+}
+#cabin #search ul{
+  margin-bottom: 50px;
+}
+
 #cabin-imgs{
   grid-area: imgs;
 }
@@ -782,9 +801,13 @@ body {
 }
 #cabin #amenities{
   grid-area: amenities;
+  text-align: center;
+  list-style-position: inside;
 }
 #cabin #reviews {
   grid-area: reviews;
+  margin-left: 75px;
+  margin-right: 75px;
 }
 footer{
   grid-area: footer;
