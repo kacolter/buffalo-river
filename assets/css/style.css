@@ -315,7 +315,15 @@ th{
 }
 
 /* -------------------------------------------------------------Canoe CSS----------------------------------------------------------- */
-
+#canoe #rentals table{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+#canoe #shuttle table{
+  margin-left: auto;
+  margin-right: auto;
+}
 #title li{
   list-style-type: none;
 }
@@ -870,8 +878,8 @@ footer{
   
 
 #canoe #shuttle table{
-  margin-left: 194px;
-  margin-right: 194px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
   #canoe .title-content{
